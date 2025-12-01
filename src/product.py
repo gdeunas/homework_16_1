@@ -19,10 +19,12 @@ class Product:
         self.sum_of_products = sum_of_products
 
     def __add__(self, other):
-        self.sum_of_products = float(self.__price) * float(self.quantity) + float(
-            other.__price
-        ) * float(other.quantity)
-        return self.sum_of_products
+        if isinstance(other, Product):
+            self.sum_of_products = float(self.__price) * float(self.quantity) + float(
+                other.__price
+            ) * float(other.quantity)
+            return self.sum_of_products
+        raise TypeError
 
     @classmethod
     def new_product(cls, product):
@@ -41,3 +43,7 @@ class Product:
 
     def __str__(self):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
+
+
+if __name__ == "__main__":
+    pass
