@@ -18,7 +18,7 @@ def test_ext_product_smartphone_add(ext_product_smartphone1, ext_product_smartph
 
 def test_ext_product_smartphone_add1(ext_product_smartphone1, ext_product_smartphone2):
     with pytest.raises(TypeError):
-        result = ext_product_smartphone1 + 1
+        print(ext_product_smartphone1 + 1)
 
 
 def test_ext_product_grass(ext_product_grass1):
@@ -37,4 +37,4 @@ def test_ext_product_grass_add(ext_product_grass1, ext_product_grass2):
 
 def test_ext_product_grass_add1(ext_product_grass1, ext_product_grass2):
     with pytest.raises(TypeError):
-        result = ext_product_grass1 + 1
+        print(ext_product_grass1 + 1)
