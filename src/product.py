@@ -27,7 +27,7 @@ class Product:
                 return self.sum_of_products
             raise TypeError
         else:
-            if isinstance(other, type(self)):
+            if type(other) is type(self):
                 self.sum_of_products = float(self.quantity) + float(other.quantity)
                 return self.sum_of_products
             raise TypeError

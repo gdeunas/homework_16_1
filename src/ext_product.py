@@ -52,3 +52,4 @@ if __name__ == "__main__":
     )
 
     print(smartphone1 + smartphone2)
+    print(smartphone1 + 1)
